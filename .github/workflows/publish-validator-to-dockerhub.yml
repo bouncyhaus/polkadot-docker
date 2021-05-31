@@ -4,8 +4,6 @@ on:
   release:
     types:
       - published
-  workflow_dispatch:
-    
 
 jobs:
   validator:
@@ -36,3 +34,4 @@ jobs:
           push: true
           tags: |
             bouncyhaus/polkadot-validator:latest
+            bouncyhaus/polkadot-validator:${{ github.ref }}
